@@ -1,3 +1,7 @@
+// Import the SCSS Partials into the main SCSS Style sheet
+@import "_btnConfig.scss";
+@import "_config.scss";
+@import "_utilities.scss";
 
 * {
   box-sizing: border-box;
