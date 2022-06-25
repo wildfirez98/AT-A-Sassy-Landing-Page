@@ -23,15 +23,67 @@ a {
   text-decoration: none;
 }
 
-.hero {
-  // This is where the bulk of the SCSS styling needs to be done
 
+  // This is where the bulk of the SCSS styling needs to be done in the .hero group below
   // Take a look at the other files we've built already. How can they be useful here?
-
   // Also, take time to review the features of SCSS we've already covered:
   // 1. $variables
   // 2. nesting (dont forget about the ampersand (&) parent selector!)
   // 3. At-Rules
+
+.hero {
+  @include set-bg($primary-color); // Set background color from mixin set-bg in _utilities partial
+  height: 600px;
+
+
+  // Nav Bar Styling
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 15px;
+    }
+
+    a {
+      color: text-color-picker($primary-color);
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+
+    img {
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+  }
+
+
+
+
+
+
+
+
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
